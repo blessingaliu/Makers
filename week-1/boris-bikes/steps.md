@@ -155,6 +155,9 @@ $irb
   => #<Bike:0x007fe022230258>
 ```
 
+- We want DockingStation instances to dock a Bike instance, and to read from an instance variable to return a docked bike.
+
+
 - Add a unit test so that docking station objects can respond to a method dock that takes an argument of a bike
 
 **(To be able to see a docked bike)
@@ -180,14 +183,72 @@ end
 </br>
 
 
-9.  
+9.  Raising Exceptions
+
+- Right now, the release_bike method in the Docking Station class actually instantiates a new Bike instance each time we want one released so this makes infinite bikes 
+
+- We want an exception to be raised when there are no bikes available eg in irb 
+```ruby
+$ irb
+2.1.5 :001 > require './lib/docking_station'
+ => true
+2.1.5 :002 > docking_station = DockingStation.new
+ => #<DockingStation:0x007fe022230258 ...>
+2.1.5 :003 > docking_station.release_bike
+RuntimeError: No bikes available
+  .... stack trace omitted ....
+```
+
+- We can set DockingStations to start empty so we'll need to  update our unit tests
+
+- Update the release_bike method to return an instance of a bike (@bike)
+
+- Write a unit test to check that an explicit error is raised when the station is empty.
+
+- Add a fail line in the release_bike method before releasing an instance of a bike that sets the program to say "No bikes available" unless there is already a bike object
+
+</br>
+
+10. 
 ```ruby
 
 ```
 
 </br>
 
-10. 
+
+11. 
+```ruby
+
+```
+
+</br>
+
+
+12. 
+```ruby
+
+```
+
+</br>
+
+13. 
+```ruby
+
+```
+
+</br>
+
+
+14. 
+```ruby
+
+```
+
+</br>
+
+
+15. 
 ```ruby
 
 ```
