@@ -209,15 +209,35 @@ RuntimeError: No bikes available
 
 </br>
 
-10. 
-```ruby
+10. Using complex attributes
 
+- Now we can dock bikes up to a capacity of 1, and to release_bike if there is a bike available. However we now want each docking station to accept 20 bikes
+
+- We want to convert our instance variable @bike to reference a collection, allowing the docking and releasing of more than one bike. 
+
+- We can use an array or a hash to store the collections object (@bikes = [])
+
+- We can feature test it to see if we can dock 20 bikes in the docking station
+```ruby
+# In irb
+- require './lib/docking_station'
+- docking_station = DockingStation.new
+- 20.times { docking_station.dock Bike.new }
+- docking_station.dock Bike.new
 ```
+
+- We can add a unit test to raise an error when the dock is full 
+
+- Add an array to the code using the initialize method
+
+- the release_bike method should fail if @bikes is empty and should add a bike to the array 
+
+- the dock(bike) method should fail if the number of bikes is greater than or equal to 20
 
 </br>
 
 
-11. 
+11. Single responsibility principle
 ```ruby
 
 ```
