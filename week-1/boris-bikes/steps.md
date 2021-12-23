@@ -139,9 +139,42 @@ end
 </br>
 
 
-8. 
+8. Using instance variables
 ```ruby
+# This is what we want in irb 
+$irb
+2.2.0 :001 > require './lib/docking_station'
+  => true
+2.2.0 :002 > require './lib/bike'
+  => true
+2.2.0 :003 > bike = Bike.new
+  => #<Bike:0x007fe022230258>
+2.2.0 :004 > docking_station = DockingStation.new
+  => #<DockingStation:0x009fe222234258>
+2.2.0 :005 > docking_station.dock(bike)
+  => #<Bike:0x007fe022230258>
+```
 
+- Add a unit test so that docking station objects can respond to a method dock that takes an argument of a bike
+
+**(To be able to see a docked bike)
+- The DockingStation instances must have the ability to remember docked bikes ('state') and the ability to report docked bikes ('behaviour')**
+
+- Both storing something and permitting access to read that thing can be done using attributes or instance variables 
+
+- Add an attribute reader to read the @bike attribute eg 
+```ruby
+# Read the @bike attribute on an instance
+def bike
+  @bike
+end
+
+# However this will essentially write the method above on any instances of this class
+class DockingStation
+  attr_reader :bike
+end
+
+# You can remove the bike method you previously created 
 ```
 
 </br>
