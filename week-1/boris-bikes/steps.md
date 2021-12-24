@@ -237,10 +237,15 @@ RuntimeError: No bikes available
 </br>
 
 
-11. Single responsibility principle
-```ruby
+11. Isolating tests with Doubles 
 
-```
+- We can use a dummy object, a double, Unit Tests that interact with other classes.
+
+- our dockingstation test is not isolated, it is dependent on the bike class
+
+- A double is a temporary, disposable object that we can use as a stand-in for some other real object - like a Bike for example. 
+
+- A little secret: it doesn't matter what symbol you use when creating a double using double :symbol
 
 </br>
 
