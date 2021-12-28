@@ -12,4 +12,11 @@ describe('Thermostat class', () => {
         thermostat.up()
         expect(thermostat.getTemperature()).toBeGreaterThan(21);
     });
+
+    it('Decreases the temperature by 2', () => {
+        const thermostat = new Thermostat();
+        thermostat.down() 
+        thermostat.down()
+        expect(thermostat.getTemperature()).toBeLessThan(19);
+    });
 });
