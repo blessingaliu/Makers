@@ -19,4 +19,32 @@ describe('Thermostat class', () => {
         thermostat.down()
         expect(thermostat.getTemperature()).toBeLessThan(19);
     });
+
+    it('power saving mode on', () => {
+        const thermostat = new Thermostat();
+        thermostat.setPowerSavingMode(true);
+        for (let i = 0 ; i < 10 ; i++) {
+            thermostat.up();
+        }
+        expect(thermostat.getTemperature()).toBe(25);
+    });
+
+    it('Can go above previous max temp with power saving off', () => {
+        const thermostat = new Thermostat();
+        thermostat.setPowerSavingMode(false);
+        for (let i = 0 ; i < 6 ; i++) {
+            thermostat.up();
+        }
+        expect(thermostat.getTemperature()).toBe(26);
+    });
+
+    it('Cannot go below 10 degrees', () => {
+        const thermostat = new Thermostat();
+        thermostat.setPowerSavingMode(false);
+        for (let i = 0 ; i < 11 ; i++) {
+            thermostat.down();
+        }
+        expect(thermostat.getTemperature()).toBe(10);
+    });
+    
 });
