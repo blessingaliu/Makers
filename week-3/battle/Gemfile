@@ -1,0 +1,21 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem 'rack'
+  gem "thin"
+  gem "puma"
+  gem 'reel'
+  gem "http"
+  gem 'webrick'
+
+ruby '2.7.2'
+
+gem 'eventmachine', '~> 1.2', '>= 1.2.7'
+
+group :development do
+  gem "sinatra"
+  gem "sinatra-contrib"
+  gem "rspec"
+end
