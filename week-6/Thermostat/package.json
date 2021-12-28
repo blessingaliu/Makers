@@ -1,0 +1,14 @@
+{
+  "name": "thermostat",
+  "version": "1.0.0",
+  "description": "- Working with Javascript to build a simple program to manage a thermostat using a test-driven approach",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}

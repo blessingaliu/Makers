@@ -4,7 +4,7 @@
 ## How to test:
 ```
 1. Clone the repository and pull to your local machine.
-2. Run the following command from the project directory: npm install
+2. Run the following command from the project directory: npm run test
 ```
 
 ## User Stories
