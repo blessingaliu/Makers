@@ -46,5 +46,13 @@ describe('Thermostat class', () => {
         }
         expect(thermostat.getTemperature()).toBe(10);
     });
-    
+
+    it('resets the temperature to 20', () => {
+        const thermostat = new Thermostat();
+        for (let i = 0 ; i < 6 ; i++) {
+            thermostat.up();
+        }
+        thermostat.reset();
+        expect(thermostat.getTemperature()).toEqual(20);
+    });
 });
