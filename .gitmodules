@@ -4,3 +4,6 @@
 [submodule "week-5/MakersBnb"]
 	path = week-5/MakersBnb
 	url = https://github.com/blessingaliu/MakersBnb
+[submodule "week-5/makersBnb"]
+	path = week-5/makersBnb
+	url = https://github.com/blessingaliu/MakersBnb
