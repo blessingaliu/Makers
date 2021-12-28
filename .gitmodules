@@ -7,3 +7,6 @@
 [submodule "week-8-and-9/acebook"]
 	path = week-8-and-9/acebook
 	url = https://github.com/blessingaliu/acebook
+[submodule "week-7/notesApp"]
+	path = week-7/notesApp
+	url = https://github.com/blessingaliu/notesApp
